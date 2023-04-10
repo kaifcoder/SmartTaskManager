@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "475557232530",
+    "firebase_url": "https://smarttaskmanager-bf58b-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "smarttaskmanager-bf58b",
+    "storage_bucket": "smarttaskmanager-bf58b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:475557232530:android:458a41a254834750aa0b4b",
+        "android_client_info": {
+          "package_name": "com.example.smarttaskmanager"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "475557232530-2dlr3da242armdju9cfv29400it7hriu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLhPLmbOKvF9MBHOk3wGDJvVFk4Xg-HtM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "475557232530-2dlr3da242armdju9cfv29400it7hriu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_in_bottom</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_bottom</item>
+    </style>
+    <style name="CustomHighChipChoice" parent="@style/Widget.MaterialComponents.Chip.Choice">
+        <item name="chipBackgroundColor">@color/chip_high_bg</item>
+        <item name="android:textColor">@color/chip_high_text</item>
+    </style>
+    <style name="CustomMediumChipChoice" parent="@style/Widget.MaterialComponents.Chip.Choice">
+        <item name="chipBackgroundColor">@color/chip_medium_bg</item>
+        <item name="android:textColor">@color/chip_medium_text</item>
+    </style>
+    <style name="CustomLowChipChoice" parent="@style/Widget.MaterialComponents.Chip.Choice">
+        <item name="chipBackgroundColor">@color/chip_low_bg</item>
+        <item name="android:textColor">@color/chip_low_text</item>
+    </style>
+</resources>

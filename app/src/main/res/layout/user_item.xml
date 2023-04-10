@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_30sdp"
+        android:background="@drawable/members_name_bg"
+        android:paddingVertical="@dimen/_3sdp"
+        android:paddingHorizontal="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_3sdp"
+        android:layout_marginLeft="@dimen/_3sdp"
+        >
+
+        <TextView
+            android:id="@+id/userName"
+            android:layout_width="@dimen/_85sdp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|left"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@color/desc_text"
+            android:scrollHorizontally="true"
+            android:fontFamily="@font/inter_medium"
+            android:text="Ellipsis is triple dots (...) at the end of the line. It is required when you want to keep your sentence in a single line. If your test reached the end of the line then automatically create ... at the end" />
+
+        />
+
+        <ImageButton
+            android:id="@+id/clearTextBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_cross"
+            android:layout_gravity="center|right"
+            android:background="@color/white"
+            />
+
+    </LinearLayout>
+</RelativeLayout>

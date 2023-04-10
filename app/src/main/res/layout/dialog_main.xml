@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dialogbg">
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_round_remove_24"
+        android:layout_gravity="center|top"
+        android:scaleType="centerCrop"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/assignTaskBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        app:cardElevation="0.1dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0">
+
+        <ImageButton
+            android:id="@+id/back_button"
+            android:layout_width="@dimen/_28sdp"
+            android:layout_height="@dimen/_28sdp"
+            android:layout_gravity="center|left"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:background="@drawable/ic_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/inter_medium"
+            android:text="Create Task"
+            android:textColor="@color/title_text"
+            android:textSize="@dimen/_16ssp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        app:layout_constraintBottom_toTopOf="@+id/submitTask"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0">
+
+
+        <LinearLayout
+            android:id="@+id/taskAssignLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/_15sdp">
+
+            <!--task title-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_medium"
+                android:text="Task title"
+                android:textColor="@color/title_text"
+                android:textSize="@dimen/_14ssp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                app:cardCornerRadius="@dimen/_5sdp">
+
+                <EditText
+                    android:id="@+id/taskTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:backgroundTint="@color/white"
+                    android:fontFamily="@font/inter_medium"
+                    android:hint="Enter task Title"
+                    android:inputType="text"
+                    android:padding="@dimen/_10sdp"
+                    android:textColor="@color/task_text"
+                    android:textSize="@dimen/_12ssp" />
+
+            </androidx.cardview.widget.CardView>
+
+
+            <!--            priority-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/inter_medium"
+                android:text="Priority"
+                android:textColor="@color/title_text"
+                android:textSize="@dimen/_14ssp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/priorityGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    app:singleSelection="true">
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/highPriority"
+                        style="@style/CustomHighChipChoice"
+                        android:layout_width="@dimen/_65sdp"
+                        android:layout_height="@dimen/_45sdp"
+                        android:checked="false"
+                        android:fontFamily="@font/inter_medium"
+                        android:padding="@dimen/_4sdp"
+                        android:text="High"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/_12ssp"
+                        android:textStyle="bold"
+                        app:chipCornerRadius="@dimen/_5sdp"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/mediumPriority"
+                        style="@style/CustomMediumChipChoice"
+                        android:layout_width="@dimen/_65sdp"
+                        android:layout_height="@dimen/_45sdp"
+                        android:checked="false"
+                        android:fontFamily="@font/inter_medium"
+                        android:padding="@dimen/_4sdp"
+                        android:text="Medium"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/_12ssp"
+                        android:textStyle="bold"
+                        app:chipCornerRadius="@dimen/_5sdp"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/lowPriority"
+                        style="@style/CustomLowChipChoice"
+                        android:layout_width="@dimen/_65sdp"
+                        android:layout_height="@dimen/_45sdp"
+                        android:checked="false"
+                        android:fontFamily="@font/inter_medium"
+                        android:padding="@dimen/_4sdp"
+                        android:text="Low"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/_12ssp"
+                        android:textStyle="bold"
+                        app:chipCornerRadius="@dimen/_5sdp"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                </com.google.android.material.chip.ChipGroup>
+
+            </LinearLayout>
+
+<!--            status -->
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/inter_medium"
+                android:text="Status"
+                android:textColor="@color/title_text"
+                android:textSize="@dimen/_14ssp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/statusLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/statusGroupAdmin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    app:singleSelection="true">
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/todoStatus"
+                        style="@style/CustomHighChipChoice"
+                        android:layout_width="@dimen/_65sdp"
+                        android:layout_height="@dimen/_45sdp"
+                        android:checkable="false"
+                        android:checked="false"
+                        android:fontFamily="@font/inter_medium"
+                        android:padding="@dimen/_4sdp"
+                        android:text="Todo"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/_12ssp"
+                        android:textStyle="bold"
+                        app:chipCornerRadius="@dimen/_5sdp"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/inProgressStatus"
+                        style="@style/CustomMediumChipChoice"
+                        android:layout_width="@dimen/_80sdp"
+                        android:layout_height="@dimen/_45sdp"
+                        android:checkable="false"
+                        android:checked="false"
+                        android:fontFamily="@font/inter_medium"
+                        android:padding="@dimen/_4sdp"
+                        android:text="In Progress"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/_12ssp"
+                        android:textStyle="bold"
+                        app:chipCornerRadius="@dimen/_5sdp"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/doneStatus"
+                        style="@style/CustomLowChipChoice"
+                        android:layout_width="@dimen/_65sdp"
+                        android:layout_height="@dimen/_45sdp"
+                        android:checkable="false"
+                        android:checked="false"
+                        android:fontFamily="@font/inter_medium"
+                        android:padding="@dimen/_4sdp"
+                        android:text="Done"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/_12ssp"
+                        android:textStyle="bold"
+                        app:chipCornerRadius="@dimen/_5sdp"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                </com.google.android.material.chip.ChipGroup>
+
+            </LinearLayout>
+
+
+            <!--pick date-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp">
+
+                <RelativeLayout
+                    android:id="@+id/centerinparent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true" />
+
+                <TextView
+                    android:id="@+id/starttext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_medium"
+                    android:text="Starts"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14ssp" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/starttext"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    app:cardCornerRadius="@dimen/_5sdp"
+                    android:elevation="@dimen/_5sdp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|left"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:src="@drawable/ic_calender_start" />
+
+
+                    <TextView
+                        android:id="@+id/startDate"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|right"
+                        android:layout_marginLeft="@dimen/_25sdp"
+                        android:fontFamily="@font/inter_medium"
+                        android:hint="@string/start_date_msg"
+                        android:padding="@dimen/_7sdp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12ssp" />
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/endtext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/centerinparent"
+                    android:fontFamily="@font/inter_medium"
+                    android:text="Ends"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14ssp" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/endtext"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_toRightOf="@+id/centerinparent"
+                    app:cardCornerRadius="@dimen/_5sdp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|left"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:src="@drawable/ic_calender_end" />
+
+
+                    <TextView
+                        android:id="@+id/dueDate"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_25sdp"
+                        android:fontFamily="@font/inter_medium"
+                        android:hint="@string/due_date_msg"
+                        android:padding="@dimen/_7sdp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12ssp" />
+
+                </androidx.cardview.widget.CardView>
+
+
+            </RelativeLayout>
+
+            <!--Participants-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/inter_medium"
+                android:text="Participants"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14ssp"
+                android:visibility="visible"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                >
+
+                <ImageButton
+                    android:id="@+id/assignTaskToUserBtn"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@drawable/participants_add"
+                    android:src="@drawable/ic_baseline_add_24" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/taskAssignTo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp" />
+
+            </LinearLayout>
+
+            <!--descripation-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/inter_medium"
+                android:text="Description"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14ssp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@color/white"
+                app:cardCornerRadius="@dimen/_5sdp">
+
+                <EditText
+                    android:id="@+id/taskDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_180sdp"
+                    android:fontFamily="@font/inter_medium"
+                    android:gravity="top"
+                    android:hint="This is where you write description....."
+                    android:padding="@dimen/_10sdp"
+                    android:backgroundTint="@color/white"
+                    android:textColor="@color/task_text"
+                    android:textSize="@dimen/_12ssp" />
+
+            </androidx.cardview.widget.CardView>
+            <RelativeLayout
+                android:id="@+id/createTaskbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:background="@drawable/ic_assignbtn"
+                android:padding="@dimen/_5sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/inter_medium"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:text="Create Task"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14ssp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

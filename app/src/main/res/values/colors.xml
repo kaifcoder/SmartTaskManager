@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primaryColor">#304ffe</color>
+    <color name="primaryLightColor">#7a7cff</color>
+    <color name="primaryDarkColor">#0026ca</color>
+    <color name="secondaryColor">#304ffe</color>
+    <color name="secondaryLightColor">#7a7cff</color>
+    <color name="secondaryDarkColor">#0026ca</color>
+    <color name="primaryTextColor">#ffffff</color>
+    <color name="secondaryTextColor">#ffffff</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="pink">#FFC0CB</color>
+    <color name="red">#FF0000</color>
+
+    <!--    JADU COLOR-->
+    <color name="low_green">#C3EFDF</color>
+    <color name="dark_green">#37CB95</color>
+    <color name="low_yellow">#FAE4BC</color>
+    <color name="dark_yellow">#EEA620</color>
+    <color name="low_red">#F5C5D0</color>
+    <color name="dark_red">#DE3C63</color>
+    <color name="title_text">#1A1A1A</color>
+    <color name="desc_text">#919CA5</color>
+    <color name="bg_color">#F7F8FA</color>
+    <color name="low_pink">#F0CEE8</color>
+    <color name="dark_pink">#EE3FC4</color>
+    <color name="profile_bg">#E2EFFF</color>
+    <color name="status_bar_g1">#3FA3FB</color>
+    <color name="status_bar_g2">#30CBDC</color>
+    <color name="colorPrimary">#795548</color>
+    <color name="colorPrimaryDark">#5D4037</color>
+    <color name="colorPrimaryDarkest">#3E2723</color>
+    <color name="colorAccent">#009688</color>
+
+    <color name="low_grey">#d2d4da</color>
+    <color name="dark_grey">#9496a1</color>
+
+    <color name="task_text">#5b5d6b</color>
+
+    <color name="transparent">#00FF0000</color>
+
+</resources>

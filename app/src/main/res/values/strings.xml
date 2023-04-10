@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">Smart Task Manager</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="calender">Calender</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="task_title">Enter Task Title</string>
+    <string name="task_description">Enter Task Description</string>
+    <string name="task_priority">Task Priority</string>
+    <string name="key_1">1</string>
+    <string name="key_2">2</string>
+    <string name="key_3">3</string>
+    <string name="key_4">4</string>
+    <string name="key_5">5</string>
+    <string name="key_6">6</string>
+    <string name="key_7">7</string>
+    <string name="key_8">8</string>
+    <string name="key_9">9</string>
+    <string name="key_0">0</string>
+
+    <!--    Date Pick-->
+    <string name="start_date_msg">Feb 8, 2022</string>
+    <string name="due_date_msg">Feb 10, 2022</string>
+    <string name="assign">Task Priority</string>
+    <string name="today">Today</string>
+    <string name="secure_vault">Secure Vault</string>
+    <string name="title_activity_secure_vault">SecureVault</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+</resources>
