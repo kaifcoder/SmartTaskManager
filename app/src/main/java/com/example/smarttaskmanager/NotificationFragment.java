@@ -68,7 +68,6 @@ public class NotificationFragment extends Fragment {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 notifications.clear();
                 for (DataSnapshot snapshot1 : snapshot.getChildren()) {
-                    System.out.println(snapshot1.getValue());
                     notifications.add(snapshot1.getValue(NotificationData.class));
                 }
                 binding.notificationProgress.setVisibility(View.GONE);

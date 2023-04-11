@@ -300,7 +300,7 @@
                 android:background="@color/white"
                 app:cardCornerRadius="@dimen/_5sdp">
 
-                <TextView
+                <EditText
                     android:id="@+id/taskDescSubmit"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_180sdp"

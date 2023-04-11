@@ -11,9 +11,10 @@
         android:icon="@drawable/baseline_security_24"
         android:title="@string/secure_vault"/>
     <item
-        android:id="@+id/fab"
-        android:title=""
-        android:enabled="false"/>
+        android:id="@+id/charts"
+        android:title="charts"
+        android:icon="@drawable/baseline_show_chart_24"
+        />
     <item
         android:id="@+id/nav_calender"
         android:icon="@drawable/ic_calender_end"

@@ -125,30 +125,6 @@
         </com.google.android.material.textfield.TextInputLayout>
 
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/TaskCategory"
-            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/inter_medium"
-            android:backgroundTint="@color/white"
-            >
-
-            <AutoCompleteTextView
-                android:id="@+id/createUserField"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:backgroundTint="@color/white"
-                android:inputType="none"
-                android:text="Select Field"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:fontFamily="@font/inter_medium"
-                />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-
-
         <RelativeLayout
             android:id="@+id/createUserLoginButton"
             android:layout_width="wrap_content"

@@ -52,6 +52,7 @@ public class SubmitTaskActivity extends AppCompatActivity {
             }
             String path = "all-tasks/user-tasks";
             selectedTask.setTaskStatus(getSelectedStatus());
+            selectedTask.setTaskDescription(binding.taskDescSubmit.getText().toString().trim());
 
             for (Users user : selectedTask.getGrpTask()) {
                 database.getReference().child(path).child(user.getFireuserid())
@@ -60,7 +61,7 @@ public class SubmitTaskActivity extends AppCompatActivity {
                         .addOnCompleteListener(task -> {
                             if (count == selectedTask.getGrpTask().size() - 1) {
                                 Toast.makeText(context, "Task Updated", Toast.LENGTH_SHORT).show();
-                                CommonUtils.sendNotificationToUser(selectedTask,context,selectedTask.getTaskTitle(),"Task Updated: "+selectedTask.getTaskStatus());
+                                CommonUtils.sendNotificationToUser(selectedTask,context,selectedTask.getTaskTitle(),"Task Updated: "+selectedTask.getTaskStatus() +"\nTask Description: "+selectedTask.getTaskDescription());
                                 count = 0;
                             } else {
                                 count++;
@@ -78,7 +79,6 @@ public class SubmitTaskActivity extends AppCompatActivity {
         binding.startDate.setText(selectedTask.getTaskAssigned());
         binding.dueDate.setText(selectedTask.getTaskDeadline());
         setTaskStatus();
-
     }
 
     private void setTaskStatus() {

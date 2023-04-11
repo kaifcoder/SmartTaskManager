@@ -1,5 +1,6 @@
 package com.example.smarttaskmanager;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -115,8 +116,6 @@ public class HomeFragment extends Fragment {
     }
 
     void loadTask() {
-
-
         FirebaseDatabase.getInstance().getReference().child("all-tasks")
                 .child("user-tasks")
                 .child(currentUserId)

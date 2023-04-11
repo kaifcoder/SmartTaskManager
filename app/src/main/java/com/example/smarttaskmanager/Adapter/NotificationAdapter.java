@@ -50,11 +50,9 @@ public class NotificationAdapter extends RecyclerView.Adapter<NotificationAdapte
         holder.binding.notificationDate.setText(timeAndDate);
 
         holder.binding.taskItem.setOnLongClickListener(v -> {
-            Toast.makeText(context, id, Toast.LENGTH_SHORT).show();
             AlertDialog dialog = CommonUtils.generateAlertDialog(context, "Do you want to delete this notification?",
                     (dialog1, which) -> {
                         String path = "Notifications/" + FirebaseAuth.getInstance().getUid() + "/" + id;
-                        Toast.makeText(context, path, Toast.LENGTH_SHORT).show();
                         FirebaseDatabase.getInstance().getReference(path).removeValue().addOnSuccessListener(unused -> {
                             CommonUtils.showToast(context, "Notification Deleted");
                         });

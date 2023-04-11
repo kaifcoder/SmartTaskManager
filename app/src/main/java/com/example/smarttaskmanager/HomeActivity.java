@@ -99,15 +99,23 @@ public class HomeActivity extends AppCompatActivity {
 
             switch (item.getItemId()) {
                 case R.id.navigation_home:
+                    binding.addTaskBtn.setVisibility(View.VISIBLE);
                     replaceFragment(new HomeFragment());
                     break;
                 case R.id.navigation_dashboard:
+                    binding.addTaskBtn.setVisibility(View.INVISIBLE);
                     replaceFragment(new DashboardFragment());
                     break;
+                case R.id.charts:
+                    binding.addTaskBtn.setVisibility(View.INVISIBLE);
+                    replaceFragment(new ChartFragment());
+                    break;
                 case R.id.nav_calender:
+                    binding.addTaskBtn.setVisibility(View.VISIBLE);
                     replaceFragment(new CalenderFragment());
                     break;
                 case R.id.navigation_notifications:
+                    binding.addTaskBtn.setVisibility(View.INVISIBLE);
                     replaceFragment(new NotificationFragment());
                     break;
             }
@@ -119,6 +127,7 @@ public class HomeActivity extends AppCompatActivity {
         perm();
 
         binding.addTaskBtn.setOnClickListener(view -> showBottomDialog());
+
 
         database.getReference().child(USER_PATH).addValueEventListener(new ValueEventListener() {
             @Override
